@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameOfFoodies.Api/1.0.0": {
+        "dependencies": {
+          "GameOfFoodies.Aplication": "1.0.0",
+          "GameOfFoodies.Contracts": "1.0.0",
+          "GameOfFoodies.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "GameOfFoodies.Api.dll": {}
+        }
+      },
+      "GameOfFoodies.Aplication/1.0.0": {
+        "dependencies": {
+          "GameOfFoodies.Domain": "1.0.0"
+        },
+        "runtime": {
+          "GameOfFoodies.Aplication.dll": {}
+        }
+      },
+      "GameOfFoodies.Contracts/1.0.0": {
+        "runtime": {
+          "GameOfFoodies.Contracts.dll": {}
+        }
+      },
+      "GameOfFoodies.Domain/1.0.0": {
+        "runtime": {
+          "GameOfFoodies.Domain.dll": {}
+        }
+      },
+      "GameOfFoodies.Infrastructure/1.0.0": {
+        "dependencies": {
+          "GameOfFoodies.Aplication": "1.0.0"
+        },
+        "runtime": {
+          "GameOfFoodies.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameOfFoodies.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameOfFoodies.Aplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameOfFoodies.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameOfFoodies.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameOfFoodies.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

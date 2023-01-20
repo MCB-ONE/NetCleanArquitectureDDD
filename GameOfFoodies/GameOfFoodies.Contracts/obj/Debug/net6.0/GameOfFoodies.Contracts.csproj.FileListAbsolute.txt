@@ -1,0 +1,12 @@
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\bin\Debug\net6.0\GameOfFoodies.Contracts.deps.json
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\bin\Debug\net6.0\GameOfFoodies.Contracts.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\bin\Debug\net6.0\ref\GameOfFoodies.Contracts.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\bin\Debug\net6.0\GameOfFoodies.Contracts.pdb
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.AssemblyInfoInputs.cache
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.AssemblyInfo.cs
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\ref\GameOfFoodies.Contracts.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.pdb
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Contracts\obj\Debug\net6.0\GameOfFoodies.Contracts.csproj.AssemblyReference.cache

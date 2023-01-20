@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameOfFoodies.Aplication/1.0.0": {
+        "dependencies": {
+          "GameOfFoodies.Domain": "1.0.0"
+        },
+        "runtime": {
+          "GameOfFoodies.Aplication.dll": {}
+        }
+      },
+      "GameOfFoodies.Domain/1.0.0": {
+        "runtime": {
+          "GameOfFoodies.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameOfFoodies.Aplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameOfFoodies.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

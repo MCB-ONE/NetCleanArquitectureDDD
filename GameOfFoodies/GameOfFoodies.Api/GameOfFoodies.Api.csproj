@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameOfFoodies.Contracts\GameOfFoodies.Contracts.csproj" />
+    <ProjectReference Include="..\GameOfFoodies.Aplication\GameOfFoodies.Aplication.csproj" />
+    <ProjectReference Include="..\GameOfFoodies.Infrastructure\GameOfFoodies.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
