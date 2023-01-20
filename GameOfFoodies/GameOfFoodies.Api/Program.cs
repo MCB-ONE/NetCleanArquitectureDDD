@@ -1,5 +1,13 @@
+
+using GameOfFoodies.Aplication;
+using GameOfFoodies.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 {
+    builder.Services
+    .AddApplication()
+    .AddInfrastructure();
+    
     builder.Services.AddControllers();
 }
 
