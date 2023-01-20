@@ -19,8 +19,8 @@ POST {{host}}/auth/registro
 #### Registro Request 
 ```json
 {
-    "first-name": "Usuario",
-    "last-name": "Test",
+    "firstName": "Usuario",
+    "lastName": "Test",
     "email": "usuario.test@gmail.com",
     "password": "usaurio.test1234$"
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TQzNnkwN3NTYi8/wxGKAWGAiOIjrebx8vWT5HFgeOV2EK1BZqJHO2JJqwKBGP9EafIz9P0r6SVc02sanTrOzew==",
+  "dgSpecHash": "J0Zg9gPFBsqbSev+ChdlVYSxvcElE/j7nM1YIXU79QQD0MhD9yiU5rqS3iExuo8vRgir4nx2WVB011mRoDHGvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET\\NetCleanArquitectureDDD\\GameOfFoodies\\GameOfFoodies.Api\\GameOfFoodies.Api.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

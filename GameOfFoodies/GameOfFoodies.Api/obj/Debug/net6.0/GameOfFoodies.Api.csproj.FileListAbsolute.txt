@@ -28,3 +28,4 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodie
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\bin\Debug\net6.0\GameOfFoodies.Aplication.pdb
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\bin\Debug\net6.0\GameOfFoodies.Infrastructure.pdb
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\bin\Debug\net6.0\GameOfFoodies.Domain.pdb
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
