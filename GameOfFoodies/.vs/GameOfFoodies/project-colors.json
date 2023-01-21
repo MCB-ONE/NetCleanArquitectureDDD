@@ -1,5 +1,11 @@
 {
   "Version": 1,
-  "ProjectMap": {},
-  "NextColorIndex": 0
+  "ProjectMap": {
+    "52c20f48-b854-4013-91f6-53610ef49a8f": {
+      "ProjectGuid": "52c20f48-b854-4013-91f6-53610ef49a8f",
+      "DisplayName": "GameOfFoodies.Infrastructure",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
 }

@@ -4,10 +4,13 @@ using GameOfFoodies.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
+
+    var config = builder.Configuration;
+
     builder.Services
     .AddApplication()
-    .AddInfrastructure();
-    
+    .AddInfrastructure(config);
+
     builder.Services.AddControllers();
 }
 
