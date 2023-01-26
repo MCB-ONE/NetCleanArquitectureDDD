@@ -25,10 +25,10 @@ public class AuthController : ControllerBase
             request.Password);
 
         var response = new AuthResponse(
-            authResult.Id,
-            authResult.Nombre,
-            authResult.Apellido,
-            authResult.Email,
+            authResult.Usuario.Id,
+            authResult.Usuario.Nombre,
+            authResult.Usuario.Apellido,
+            authResult.Usuario.Email,
             authResult.Token
         );
 
@@ -43,10 +43,10 @@ public class AuthController : ControllerBase
             request.Password);
 
         var response = new AuthResponse(
-            authResult.Id,
-            authResult.Nombre,
-            authResult.Apellido,
-            authResult.Email,
+            authResult.Usuario.Id,
+            authResult.Usuario.Nombre,
+            authResult.Usuario.Apellido,
+            authResult.Usuario.Email,
             authResult.Token
         );
 

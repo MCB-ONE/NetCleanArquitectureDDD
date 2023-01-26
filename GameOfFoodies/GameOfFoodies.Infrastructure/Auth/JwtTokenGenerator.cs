@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Services;
+using GameOfFoodies.Domain.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -19,7 +20,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         _dateTimeProvider = dateTimeProvider;
     }
 
-    public string GenerateToken(Guid usaurioId, string nombre, string apellido)
+    public string GenerateToken(Usuario usuario)
     {
         // Defiimos la firma digital cifrada
         var signingCredentials = new SigningCredentials(
@@ -31,9 +32,9 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         // Definimos los claims => información a enviar en el token
         var claims = new Claim[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, usaurioId.ToString()),
-                new Claim(JwtRegisteredClaimNames.GivenName, nombre),
-                new Claim(JwtRegisteredClaimNames.FamilyName, apellido),
+                new Claim(JwtRegisteredClaimNames.Sub, usuario.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.GivenName, usuario.Nombre),
+                new Claim(JwtRegisteredClaimNames.FamilyName, usuario.Apellido),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

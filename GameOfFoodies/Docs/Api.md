@@ -19,8 +19,8 @@ POST {{host}}/auth/registro
 #### Registro Request 
 ```json
 {
-    "firstName": "Usuario",
-    "lastName": "Test",
+    "Nombre": "Usuario",
+    "Apellido": "Test",
     "email": "usuario.test@gmail.com",
     "password": "usaurio.test1234$"
 }
@@ -32,8 +32,8 @@ POST {{host}}/auth/registro
 ```json
 {
     "id": "283e55c9-47bc-4f5c-bfa2-099e6e1cfa8d",
-    "first-name": "Usuario",
-    "last-name": "Test",
+    "nombre": "Usuario",
+    "apellido": "Test",
     "email": "usuario.test@gmail.com",
     "token": "ciOiJIU...IxMjM0N"
 }
@@ -58,8 +58,8 @@ POST {{host}}/auth/login
 ```json
 {
     "id": "283e55c9-47bc-4f5c-bfa2-099e6e1cfa8d",
-    "first-name": "Usuario",
-    "last-name": "Test",
+    "nombre": "Usuario",
+    "apellido": "Test",
     "email": "usuario.test@gmail.com",
     "token": "ciOiJIU...IxMjM0N"
 }

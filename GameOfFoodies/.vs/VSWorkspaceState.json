@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GameOfFoodies.Aplication\\Common",
+    "\\GameOfFoodies.Aplication\\Common\\Interfaces"
   ],
-  "SelectedNode": "\\GameOfFoodies.sln",
+  "SelectedNode": "\\GameOfFoodies.Aplication",
   "PreviewInSolutionExplorer": false
 }

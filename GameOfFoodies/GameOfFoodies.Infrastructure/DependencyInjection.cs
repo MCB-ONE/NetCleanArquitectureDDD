@@ -1,6 +1,8 @@
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
+using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
 using GameOfFoodies.Aplication.Common.Interfaces.Services;
 using GameOfFoodies.Infrastructure.Auth;
+using GameOfFoodies.Infrastructure.Persistence;
 using GameOfFoodies.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,8 +19,11 @@ public static class DependencyInjection
     )
     {
         service.Configure<JwtSettings>(config.GetSection(JwtSettings.SectionName));
+
         service.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         service.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+
+        service.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
         return service;
     }

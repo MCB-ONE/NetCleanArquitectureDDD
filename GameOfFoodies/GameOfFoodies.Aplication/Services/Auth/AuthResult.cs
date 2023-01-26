@@ -1,9 +1,8 @@
+using GameOfFoodies.Domain.Entities;
+
 namespace GameOfFoodies.Aplication.Services.Auth;
 
 public record AuthResult(
-    Guid Id,
-    string Nombre,
-    string Apellido,
-    string Email,
+    Usuario Usuario,
     string Token
 );
