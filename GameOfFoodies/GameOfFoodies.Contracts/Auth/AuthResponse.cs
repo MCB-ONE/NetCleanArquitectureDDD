@@ -2,8 +2,8 @@ namespace GameOfFoodies.Contracts.Authentication;
 
 public record AuthResponse(
     Guid Id,
-    string FirstName,
-    string Lastname,
+    string Nombre,
+    string Apellido,
     string Email,
     string Token
 );

@@ -19,16 +19,16 @@ public class AuthController : ControllerBase
     public IActionResult Registro(RegistroRequest request)
     {
         var authResult = _authService.Registro(
-            request.FirstName,
-            request.Lastname,
+            request.Nombre,
+            request.Apellido,
             request.Email,
             request.Password);
 
         var response = new AuthResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.Lastname,
-            authResult.Email,
+            authResult.Usuario.Id,
+            authResult.Usuario.Nombre,
+            authResult.Usuario.Apellido,
+            authResult.Usuario.Email,
             authResult.Token
         );
 
@@ -43,10 +43,10 @@ public class AuthController : ControllerBase
             request.Password);
 
         var response = new AuthResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.Lastname,
-            authResult.Email,
+            authResult.Usuario.Id,
+            authResult.Usuario.Nombre,
+            authResult.Usuario.Apellido,
+            authResult.Usuario.Email,
             authResult.Token
         );
 
