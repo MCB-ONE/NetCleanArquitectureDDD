@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GameOfFoodies.Infrastructure"
   ],
-  "SelectedNode": "\\GameOfFoodies.sln",
+  "SelectedNode": "\\GameOfFoodies.Infrastructure\\DependencyInjection.cs",
   "PreviewInSolutionExplorer": false
 }
