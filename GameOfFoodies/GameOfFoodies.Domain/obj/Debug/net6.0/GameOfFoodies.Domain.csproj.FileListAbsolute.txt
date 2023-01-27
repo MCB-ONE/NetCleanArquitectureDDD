@@ -2,7 +2,6 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodie
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\bin\Debug\net6.0\GameOfFoodies.Domain.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\bin\Debug\net6.0\ref\GameOfFoodies.Domain.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\bin\Debug\net6.0\GameOfFoodies.Domain.pdb
-C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.csproj.AssemblyReference.cache
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.AssemblyInfoInputs.cache
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodie
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\ref\GameOfFoodies.Domain.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.pdb
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Domain\obj\Debug\net6.0\GameOfFoodies.Domain.csproj.AssemblyReference.cache
