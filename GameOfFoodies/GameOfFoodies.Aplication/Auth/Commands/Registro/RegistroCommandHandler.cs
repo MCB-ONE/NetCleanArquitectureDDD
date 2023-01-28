@@ -1,38 +1,43 @@
 using ErrorOr;
+using GameOfFoodies.Aplication.Auth.Common;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
-using GameOfFoodies.Aplication.Services.Auth.Common;
 using GameOfFoodies.Domain.Common.Errors;
 using GameOfFoodies.Domain.Entities;
+using MediatR;
 
-namespace GameOfFoodies.Aplication.Services.Auth.Commands;
+namespace GameOfFoodies.Aplication.Auth.Commands.Registro;
 
-public class AuthCommandService : IAuthCommandService
+// Creacion de manejador de commando del patron CQRS usando mediador MediatR 
+// => Inyectar las dependencias especificas para el manejador de commando 
+// => Realizar la lógica necesaria (en este caso para registrar/ guardar un nuevo usuario)
+public class RegistroCommandHandler : IRequestHandler<RegistroCommand, ErrorOr<AuthResult>>
 {
     private readonly IJwtTokenGenerator _jWtTokenGenerator;
     private readonly IUsuarioRepository _usuarioRepository;
 
-    public AuthCommandService(IJwtTokenGenerator jWtTokenGenerator, IUsuarioRepository usuarioRepository)
+    public RegistroCommandHandler(IJwtTokenGenerator jWtTokenGenerator, IUsuarioRepository usuarioRepository)
     {
         _jWtTokenGenerator = jWtTokenGenerator;
         _usuarioRepository = usuarioRepository;
     }
-
-    public ErrorOr<AuthResult> Registro(string nombre, string apellido, string email, string password)
+    public async Task<ErrorOr<AuthResult>> Handle(RegistroCommand command, CancellationToken cancellationToken)
     {
 
         // 1. Validar que el usuario no existe
-        if(_usuarioRepository.GetUsuarioByEmail(email) is not null){
+        if (_usuarioRepository.GetUsuarioByEmail(command.Email) is not null)
+        {
             return Errors.Usuario.DuplicateEmail;
         }
 
         // 2. Crear el usuario (generando un ID único) y persisitrlo en la BBDD
         // 2.1 El id se genera automaticamente al crear un nuevo objeto usuario
-        var usuario = new Usuario{
-            Nombre = nombre,
-            Apellido = apellido,
-            Email = email,
-            Pasword = password
+        var usuario = new Usuario
+        {
+            Nombre = command.Nombre,
+            Apellido = command.Apellido,
+            Email = command.Email,
+            Pasword = command.Password
         };
 
         _usuarioRepository.Add(usuario);
@@ -45,5 +50,4 @@ public class AuthCommandService : IAuthCommandService
             usuario,
             token);
     }
-
 }

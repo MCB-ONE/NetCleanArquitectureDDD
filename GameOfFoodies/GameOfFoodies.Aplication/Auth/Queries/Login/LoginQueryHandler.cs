@@ -1,31 +1,38 @@
 using ErrorOr;
+using GameOfFoodies.Aplication.Auth.Common;
+using GameOfFoodies.Aplication.Auth.Queries.Login;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
-using GameOfFoodies.Aplication.Services.Auth.Common;
 using GameOfFoodies.Domain.Common.Errors;
 using GameOfFoodies.Domain.Entities;
+using MediatR;
 
-namespace GameOfFoodies.Aplication.Services.Auth.Queries;
+namespace GameOfFoodies.Aplication.Auth.Queries.Registro;
 
-public class AuthQueryService : IAuthQueryService
+// Creacion de manejador de una query del patron CQRS usando mediador MediatR 
+// => Inyectar las dependencias especificas para el manejador de la query 
+// => Realizar la lógica necesaria (en este caso para dar acceso al sitema al usuario devolviendo un JWT)
+public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<AuthResult>>
 {
     private readonly IJwtTokenGenerator _jWtTokenGenerator;
     private readonly IUsuarioRepository _usuarioRepository;
 
-    public AuthQueryService(IJwtTokenGenerator jWtTokenGenerator, IUsuarioRepository usuarioRepository)
+    public LoginQueryHandler(IJwtTokenGenerator jWtTokenGenerator, IUsuarioRepository usuarioRepository)
     {
         _jWtTokenGenerator = jWtTokenGenerator;
         _usuarioRepository = usuarioRepository;
     }
 
-    public ErrorOr<AuthResult> Login(string email, string password)
+    public async Task<ErrorOr<AuthResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
         // 1. Validar si el usaurio existe
-        if(_usuarioRepository.GetUsuarioByEmail(email) is not Usuario usuario){
+        if (_usuarioRepository.GetUsuarioByEmail(query.Email) is not Usuario usuario)
+        {
             return Errors.Auth.InvalidCredentials;
         }
         // 2. Validar contraseña correcta
-        if(usuario.Pasword != password){
+        if (usuario.Pasword != query.Password)
+        {
             return Errors.Auth.InvalidCredentials;
         }
         // 3. Crear el JWT Token
@@ -36,5 +43,4 @@ public class AuthQueryService : IAuthQueryService
             usuario,
             token);
     }
-
 }

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+0iIVCRJ+r1L5RVVzSOgCrtpgEuzhLrvYmr+17IiibJgVV5ZdtuWnRMTPE/acxl58ADWrYlV3vWPkyUDJ/I8+Q==",
+  "dgSpecHash": "RcQd0tCeDFO+f/pM/JhdzKamLhq4qkXvnqQ+JE1PYHv9NXMcppDzqeYV1zR+32WPP1Gb1gsl+KGp8GD7y43oHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET\\NetCleanArquitectureDDD\\GameOfFoodies\\GameOfFoodies.Infrastructure\\GameOfFoodies.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonis\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",

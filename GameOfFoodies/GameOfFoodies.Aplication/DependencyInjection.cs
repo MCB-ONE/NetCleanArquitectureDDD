@@ -1,5 +1,4 @@
-using GameOfFoodies.Aplication.Services.Auth.Commands;
-using GameOfFoodies.Aplication.Services.Auth.Queries;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GameOfFoodies.Aplication;
@@ -7,12 +6,11 @@ namespace GameOfFoodies.Aplication;
 public static class DependencyInjection
 {
 
-    public static IServiceCollection AddApplication(this IServiceCollection service)
+    public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        service.AddScoped<IAuthCommandService, AuthCommandService>();
-        service.AddScoped<IAuthQueryService, AuthQueryService>();
+        services.AddMediatR(typeof(DependencyInjection).Assembly); 
         
-        return service;
+        return services;
     }
 
 }

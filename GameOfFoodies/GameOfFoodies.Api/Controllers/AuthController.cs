@@ -1,9 +1,9 @@
 using ErrorOr;
-using GameOfFoodies.Aplication.Services.Auth;
-using GameOfFoodies.Aplication.Services.Auth.Commands;
-using GameOfFoodies.Aplication.Services.Auth.Common;
-using GameOfFoodies.Aplication.Services.Auth.Queries;
+using GameOfFoodies.Aplication.Auth.Commands.Registro;
+using GameOfFoodies.Aplication.Auth.Common;
+using GameOfFoodies.Aplication.Auth.Queries.Login;
 using GameOfFoodies.Contracts.Authentication;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameOfFoodies.Api.Controllers;
@@ -11,23 +11,25 @@ namespace GameOfFoodies.Api.Controllers;
 [Route("auth")]
 public class AuthController : ApiController
 {
-    private readonly IAuthCommandService _authCommandService;
-    private readonly IAuthQueryService _authQueryService;
+    // Implementamos patron CQRS con MediatR => El mediador llama al manejador CQRS según el command o la query que se le envíe
+    private readonly ISender _mediator;
 
-    public AuthController(IAuthCommandService authCommandService, IAuthQueryService authQueryService)
+    public AuthController(ISender mediator)
     {
-        _authCommandService = authCommandService;
-        _authQueryService = authQueryService;
+        this._mediator = mediator;
     }
 
     [HttpPost("registro")]
-    public IActionResult Registro(RegistroRequest request)
+    public async Task<IActionResult> Registro(RegistroRequest request)
     {
-        ErrorOr<AuthResult> authResult = _authCommandService.Registro(
+        var command = new RegistroCommand(
             request.Nombre,
             request.Apellido,
             request.Email,
-            request.Password);
+            request.Password
+        );
+
+        ErrorOr<AuthResult> authResult = await _mediator.Send(command);
 
         return authResult.Match(
             authResult => Ok(MapAuthResult(authResult)),
@@ -36,11 +38,14 @@ public class AuthController : ApiController
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        ErrorOr<AuthResult> authResult = _authQueryService.Login(
+        var query = new LoginQuery(
             request.Email,
-            request.Password);
+            request.Password
+        );
+        
+        ErrorOr<AuthResult> authResult = await _mediator.Send(query);
 
 
         if(authResult.IsError && authResult.FirstError == Domain.Common.Errors.Errors.Auth.InvalidCredentials)
