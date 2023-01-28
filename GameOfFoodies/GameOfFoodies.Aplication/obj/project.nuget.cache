@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2acgMw7M9gxHBrrXOIbNgF8R/LaK+BIj66gsGLNvJCRnxKxMLaxbCZ9LQX+l5T9yRdkYLmhPsgLjpLL8T1bwoQ==",
+  "dgSpecHash": "y2R0vdjM6ulmWOxOxnDuAuzvevHM5tJdLnzOqPHXnNYFvY280kJWzZfUsyiXGkLa8e1436GF1zqPSGSuw0ZtMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET\\NetCleanArquitectureDDD\\GameOfFoodies\\GameOfFoodies.Aplication\\GameOfFoodies.Aplication.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+    "C:\\Users\\tonis\\.nuget\\packages\\fluentresults\\3.15.1\\fluentresults.3.15.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

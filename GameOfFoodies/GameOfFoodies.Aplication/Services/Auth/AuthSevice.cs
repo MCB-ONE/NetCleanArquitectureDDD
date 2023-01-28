@@ -1,3 +1,4 @@
+using FluentResults;
 using GameOfFoodies.Aplication.Common.Errors;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
@@ -16,15 +17,15 @@ public class AuthService : IAuthService
         _usuarioRepository = usuarioRepository;
     }
 
-    public AuthResult Registro(string nombre, string apellido, string email, string password)
+    public Result<AuthResult> Registro(string nombre, string apellido, string email, string password)
     {
 
-        // 1. Validar que el usaurio no existe
+        // 1. Validar que el usuario no existe
         if(_usuarioRepository.GetUsuarioByEmail(email) is not null){
-            throw new DuplicateEmailException();
+            return Result.Fail<AuthResult>(new []{new DuplicateEmailError() });
         }
 
-        // 2. Crear el usuario (generando un ID unico) y persisitrlo en la BBDD
+        // 2. Crear el usuario (generando un ID único) y persisitrlo en la BBDD
         // 2.1 El id se genera automaticamente al crear un nuevo objeto usuario
         var usuario = new Usuario{
             Nombre = nombre,
