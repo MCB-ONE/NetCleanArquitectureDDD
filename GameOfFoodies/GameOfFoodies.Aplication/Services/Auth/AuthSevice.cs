@@ -1,7 +1,7 @@
-using FluentResults;
-using GameOfFoodies.Aplication.Common.Errors;
+using ErrorOr;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
+using GameOfFoodies.Domain.Common.Errors;
 using GameOfFoodies.Domain.Entities;
 
 namespace GameOfFoodies.Aplication.Services.Auth;
@@ -17,12 +17,12 @@ public class AuthService : IAuthService
         _usuarioRepository = usuarioRepository;
     }
 
-    public Result<AuthResult> Registro(string nombre, string apellido, string email, string password)
+    public ErrorOr<AuthResult> Registro(string nombre, string apellido, string email, string password)
     {
 
         // 1. Validar que el usuario no existe
         if(_usuarioRepository.GetUsuarioByEmail(email) is not null){
-            return Result.Fail<AuthResult>(new []{new DuplicateEmailError() });
+            return Errors.Usuario.DuplicateEmail;
         }
 
         // 2. Crear el usuario (generando un ID único) y persisitrlo en la BBDD
@@ -44,15 +44,15 @@ public class AuthService : IAuthService
             usuario,
             token);
     }
-    public AuthResult Login(string email, string password)
+    public ErrorOr<AuthResult> Login(string email, string password)
     {
         // 1. Validar si el usaurio existe
         if(_usuarioRepository.GetUsuarioByEmail(email) is not Usuario usuario){
-            throw new Exception("No existe un usuario con esta dirección de email.");
+            return Errors.Auth.InvalidCredentials;
         }
         // 2. Validar contraseña correcta
         if(usuario.Pasword != password){
-            throw new Exception("Password incorrecto.");
+            return Errors.Auth.InvalidCredentials;
         }
         // 3. Crear el JWT Token
         var token = _jWtTokenGenerator.GenerateToken(usuario);

@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using ErrorOr;
+using GameOfFoodies.Api.Common.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -90,7 +92,13 @@ public class GameOfFoodiesProblemDetailsFactory : ProblemDetailsFactory
             problemDetails.Extensions["traceId"] = traceId;
         }
 
+        var errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
+
         // Añadimos nuestos detalles customizados
-        problemDetails.Extensions.Add("customPropperty", "customValue");
+        if(errors is not null)
+        {
+            problemDetails.Extensions.Add("errorsCodes", errors.Select(e => e.Code));
+        }
+
     }
 }
