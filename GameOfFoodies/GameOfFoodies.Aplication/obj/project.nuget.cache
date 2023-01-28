@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2acgMw7M9gxHBrrXOIbNgF8R/LaK+BIj66gsGLNvJCRnxKxMLaxbCZ9LQX+l5T9yRdkYLmhPsgLjpLL8T1bwoQ==",
+  "dgSpecHash": "3oUzX4kGnVifi52a27+tG2XtRSP1SGz3S0nM2WxuHrbRNJQTWjK2rD3c0h3oWlDkEvWH/0GGaEXlokbIauqjvA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET\\NetCleanArquitectureDDD\\GameOfFoodies\\GameOfFoodies.Aplication\\GameOfFoodies.Aplication.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tonis\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []
