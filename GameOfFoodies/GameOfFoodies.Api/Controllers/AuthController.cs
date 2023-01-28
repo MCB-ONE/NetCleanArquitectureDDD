@@ -1,5 +1,8 @@
 using ErrorOr;
 using GameOfFoodies.Aplication.Services.Auth;
+using GameOfFoodies.Aplication.Services.Auth.Commands;
+using GameOfFoodies.Aplication.Services.Auth.Common;
+using GameOfFoodies.Aplication.Services.Auth.Queries;
 using GameOfFoodies.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,17 +11,19 @@ namespace GameOfFoodies.Api.Controllers;
 [Route("auth")]
 public class AuthController : ApiController
 {
-    private readonly IAuthService _authService;
+    private readonly IAuthCommandService _authCommandService;
+    private readonly IAuthQueryService _authQueryService;
 
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthCommandService authCommandService, IAuthQueryService authQueryService)
     {
-        _authService = authService;
+        _authCommandService = authCommandService;
+        _authQueryService = authQueryService;
     }
 
     [HttpPost("registro")]
     public IActionResult Registro(RegistroRequest request)
     {
-        ErrorOr<AuthResult> authResult = _authService.Registro(
+        ErrorOr<AuthResult> authResult = _authCommandService.Registro(
             request.Nombre,
             request.Apellido,
             request.Email,
@@ -33,7 +38,7 @@ public class AuthController : ApiController
     [HttpPost("login")]
     public IActionResult Login(LoginRequest request)
     {
-        ErrorOr<AuthResult> authResult = _authService.Login(
+        ErrorOr<AuthResult> authResult = _authQueryService.Login(
             request.Email,
             request.Password);
 
