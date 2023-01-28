@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace GameOfFoodies.Api.Errors;
+namespace GameOfFoodies.Api.Common.Errors;
 
 // Reescritura de DefaultProblemDetailsFactory para teber un ProblemDetailsFactory customizado
 // => Hemos reescrito la clase dado que es sealed class y no permite su herencia.

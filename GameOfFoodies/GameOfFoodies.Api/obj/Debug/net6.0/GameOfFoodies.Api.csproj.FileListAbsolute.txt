@@ -36,3 +36,4 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodie
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\obj\Debug\net6.0\ref\GameOfFoodies.Api.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\obj\Debug\net6.0\GameOfFoodies.Api.pdb
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\obj\Debug\net6.0\GameOfFoodies.Api.genruntimeconfig.cache
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET\NetCleanArquitectureDDD\GameOfFoodies\GameOfFoodies.Api\bin\Debug\net6.0\OneOf.dll

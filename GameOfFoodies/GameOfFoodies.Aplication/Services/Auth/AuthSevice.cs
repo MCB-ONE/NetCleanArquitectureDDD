@@ -1,3 +1,4 @@
+using GameOfFoodies.Aplication.Common.Errors;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
 using GameOfFoodies.Domain.Entities;
@@ -20,7 +21,7 @@ public class AuthService : IAuthService
 
         // 1. Validar que el usaurio no existe
         if(_usuarioRepository.GetUsuarioByEmail(email) is not null){
-            throw new Exception("Ya existe un usuario registrado con esa dirección de email.");
+            throw new DuplicateEmailException();
         }
 
         // 2. Crear el usuario (generando un ID unico) y persisitrlo en la BBDD
