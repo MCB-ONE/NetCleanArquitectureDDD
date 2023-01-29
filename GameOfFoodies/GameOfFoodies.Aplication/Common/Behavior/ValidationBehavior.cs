@@ -7,46 +7,42 @@ using MediatR;
 namespace GameOfFoodies.Aplication.Common.Behavior;
 
 // Pipeline para validar nuestras solicitudes de MediatR utilizando Fluid Validation.
-public class ValidateRegistroCommandBehavior : IPipelineBehavior<RegistroCommand, ErrorOr<AuthResult>>
+// Método genérico para validar cualquier request que provenga de mediator: 
+// => TRequest ==> Cualquier mediator request (petición de mediatR)
+// => TResponse ==> Cualquier respuesta que esperemos de dicha petición
+public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
+    where TRequest: IRequest<TResponse>
+    where TResponse: IErrorOr
 {
-    private readonly IValidator<RegistroCommand> _validator;
+    private readonly IValidator<TRequest>? _validator;
 
-    public ValidateRegistroCommandBehavior(IValidator<RegistroCommand> validator)
+    // IValidator<TRequest>? validator = null ==> (Validacón opcional) 0 o 1 validaciones para cada petición
+    // IMPORTANTE:  especificar validator = null en el constructor si queremos que la validación sea opcional si no lanza una excepción
+    public ValidationBehavior(IValidator<TRequest>? validator = null)
     {
         _validator = validator;
     }
-
-
-    // RegistroCommand request: solicitud enviada que podemos manipular o loggear antes de llamar al delegado (next)
-    // RequestHandlerDelegate<ErrorOr<AuthResult>> next: delegado que eventualmente invocará a nuestro commandHandler y devuelve la respuesta que podremos manipular
-    public async Task<ErrorOr<AuthResult>> Handle(
-        RegistroCommand request,
-        RequestHandlerDelegate<ErrorOr<AuthResult>> next,
+    public async Task<TResponse> Handle(
+        TRequest request,
+        RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
-        // Lógica que se va a ejecutar antes de invocar el manejador
+        if(_validator is null){
+            return await next();
+        }
         var validationResult = await _validator.ValidateAsync(request, cancellationToken);
 
-        // Si la validación es correcta invocamos al commandHandler
         if( validationResult.IsValid)
         {
             return await next();
         }
-
-        // Si hay algún error de validación recogemos los errores y los añadimos a la nuesta lista de errores de la respuesta
-        // var errors = validationResult.Errors
-        // .Select(validationFailure => Error.Validation(
-        //     validationFailure.PropertyName,
-        //     validationFailure.ErrorMessage))
-        // .ToList();
-        // Refactorizado:
+        
         var errors = validationResult.Errors
         .ConvertAll(validationFailure => Error.Validation(
             validationFailure.PropertyName,
             validationFailure.ErrorMessage));
 
-        // Lógica que se va a ejecutar después de invocar el manejador
-
-        return errors;
+        // (dynamic) Verifica en tiempo de ejecución que se peuda convertir la lista de errores en un error o en un objeto si no devolverá una excepción en tiempo de ejecucón
+        return (dynamic)errors;
     }
 }
