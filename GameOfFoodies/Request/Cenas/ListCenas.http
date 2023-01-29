@@ -1,3 +1,4 @@
 @host = http://localhost:5242
 
-GET  {{host}}/dinners
+GET  {{host}}/cenas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZjllNDlhYi0yYTZiLTQwNzQtODQ4My05ODBjZDVjY2U1ZWUiLCJnaXZlbl9uYW1lIjoiVXN1YXJpbyIsImZhbWlseV9uYW1lIjoiVGVzdCIsImp0aSI6IjZhMDNhNjM2LWFiNTQtNDdlZS05ZjFmLTEyMzI1M2UyMTUwNSIsImV4cCI6MTY3NTAyMTQ2MywiaXNzIjoiR2FtZU9mRm9vZGllcyIsImF1ZCI6IkdhbWVPZkZvb2RpZXMifQ.ryRwF2YD6VTojvwLW7p-OAVyipSxa00N-K4PYOUmQbI

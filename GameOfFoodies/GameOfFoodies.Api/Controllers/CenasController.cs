@@ -6,7 +6,7 @@ namespace GameOfFoodies.Api.Controllers;
 public class CenasController: ApiController
 {
     [HttpGet]
-    public IActionResult Dinners()
+    public IActionResult Cenas()
     {
         return Ok(Array.Empty<string>());
     }
