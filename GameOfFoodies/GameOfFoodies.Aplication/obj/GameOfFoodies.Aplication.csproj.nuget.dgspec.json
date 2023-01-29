@@ -55,6 +55,14 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "fluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "fluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
             }
           },
           "imports": [

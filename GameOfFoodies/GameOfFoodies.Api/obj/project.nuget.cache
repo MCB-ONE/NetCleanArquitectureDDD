@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BQFCzYZ8ihXBnid+GbV5ojRXsLlAiF+gMxIyKfkDcdY73R2IaUh9lN5vZDYq483BjWVg+tIwQznl4zRI7BPyMw==",
+  "dgSpecHash": "9YW7e8lbwH1yU1hEQYYtKVEglQPQPXu0Lv6h/vYSrmda9VidvQ7lraR6yJB9tpsoGYGncVoqCoJv4qVlbPJqPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET\\NetCleanArquitectureDDD\\GameOfFoodies\\GameOfFoodies.Api\\GameOfFoodies.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonis\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\tonis\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\mapster.dependencyinjection\\1.0.0\\mapster.dependencyinjection.1.0.0.nupkg.sha512",

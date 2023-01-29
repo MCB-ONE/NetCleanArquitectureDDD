@@ -1,3 +1,9 @@
+using System.Reflection;
+using ErrorOr;
+using FluentValidation;
+using GameOfFoodies.Aplication.Auth.Commands.Registro;
+using GameOfFoodies.Aplication.Auth.Common;
+using GameOfFoodies.Aplication.Common.Behavior;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +16,10 @@ public static class DependencyInjection
     {
         services.AddMediatR(typeof(DependencyInjection).Assembly); 
         
+        services.AddScoped<IPipelineBehavior<RegistroCommand, ErrorOr<AuthResult>>, ValidateRegistroCommandBehavior>();
+
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
         return services;
     }
 
