@@ -5,11 +5,13 @@ using GameOfFoodies.Aplication.Auth.Queries.Login;
 using GameOfFoodies.Contracts.Authentication;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameOfFoodies.Api.Controllers;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthController : ApiController
 {
     // Implementamos patron CQRS con MediatR => El mediador llama al manejador CQRS según el command o la query que se le envíe

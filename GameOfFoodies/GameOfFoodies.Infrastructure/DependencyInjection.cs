@@ -35,7 +35,7 @@ public static class DependencyInjection
         services.AddSingleton(Options.Create(jwtSettings));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
-        // Definimos JwtBearer como nuestro esquema de autenticación por defecto, validamos el JWT Token que adjuntamos en las cabeceras de las peticiones Http y completamos los claims
+        // Definimos JwtBearer como nuestro esquema de autenticación por defecto, validamos el JWT Token que llegan en las cabeceras de las peticiones Http y completamos los claims con la info que llega en él
         services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters{
             ValidateIssuer = true,
