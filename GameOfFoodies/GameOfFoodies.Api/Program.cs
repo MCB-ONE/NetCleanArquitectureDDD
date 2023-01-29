@@ -1,21 +1,19 @@
 
-using GameOfFoodies.Api.Common.Errors;
+using GameOfFoodies.Api;
 using GameOfFoodies.Aplication;
 using GameOfFoodies.Infrastructure;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
 
     var config = builder.Configuration;
 
+    // Registramos las dependencias de cada capa
     builder.Services
+    .AddPresentation()
     .AddApplication()
     .AddInfrastructure(config);
 
-    builder.Services.AddControllers( );
-
-    builder.Services.AddSingleton<ProblemDetailsFactory, GameOfFoodiesProblemDetailsFactory>();
 }
 
 

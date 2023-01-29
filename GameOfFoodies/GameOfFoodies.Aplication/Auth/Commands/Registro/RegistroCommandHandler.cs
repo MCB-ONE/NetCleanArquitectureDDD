@@ -24,6 +24,9 @@ public class RegistroCommandHandler : IRequestHandler<RegistroCommand, ErrorOr<A
     public async Task<ErrorOr<AuthResult>> Handle(RegistroCommand command, CancellationToken cancellationToken)
     {
 
+        // Corrección método asincrono
+        await Task.CompletedTask;
+
         // 1. Validar que el usuario no existe
         if (_usuarioRepository.GetUsuarioByEmail(command.Email) is not null)
         {

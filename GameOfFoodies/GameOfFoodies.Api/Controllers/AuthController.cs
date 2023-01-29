@@ -25,17 +25,12 @@ public class AuthController : ApiController
     [HttpPost("registro")]
     public async Task<IActionResult> Registro(RegistroRequest request)
     {
-        var command = new RegistroCommand(
-            request.Nombre,
-            request.Apellido,
-            request.Email,
-            request.Password
-        );
+        var command = _mapper.Map<RegistroCommand>(request);
 
         ErrorOr<AuthResult> authResult = await _mediator.Send(command);
 
         return authResult.Match(
-            authResult => Ok(MapAuthResult(authResult)),
+            authResult => Ok(_mapper.Map<AuthResponse>(authResult)),
             errors => Problem(errors)
         );
     }
@@ -43,10 +38,7 @@ public class AuthController : ApiController
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
-        var query = new LoginQuery(
-            request.Email,
-            request.Password
-        );
+        var query = _mapper.Map<LoginQuery>(request);
         
         ErrorOr<AuthResult> authResult = await _mediator.Send(query);
 
@@ -58,20 +50,9 @@ public class AuthController : ApiController
 
 
         return authResult.Match(
-            authResult =>  Ok(MapAuthResult(authResult)),
+            authResult => Ok(_mapper.Map<AuthResponse>(authResult)),
             errors => Problem(errors)
         );
-    }
-
-    
-    private static AuthResponse MapAuthResult(AuthResult authResult)
-    {
-        return new AuthResponse(
-                authResult.Usuario.Id,
-                authResult.Usuario.Nombre,
-                authResult.Usuario.Apellido,
-                authResult.Usuario.Email,
-                authResult.Token);
     }
 
 }
