@@ -20,6 +20,7 @@ class Menu
     "id": {"value": "00000000-0000-0000-0000-000000000000"},
     "nombre": "Menú vegano",
     "descripcion": "Todo vegano! Únete a nostros para disfrutar de una cena saludable..",
+    "puntuacionMedia": 4.5,
     "secciones": [
         {
             "id": {"value": "00000000-0000-0000-0000-000000000000"},
@@ -29,8 +30,7 @@ class Menu
                 {
                     "id": {"value": "00000000-0000-0000-0000-000000000000"},
                     "nombre": "Tempura de hortalizas",
-                    "descripcion": "Fritura de hortalizas variadas al estilo japonés",
-                    "precio": 5.30
+                    "descripcion": "Fritura de hortalizas variadas al estilo japonés"
                 },
             ]
         },
@@ -42,7 +42,7 @@ class Menu
     "resenaIds": [
         {"value": "00000000-0000-0000-0000-000000000000"},
     ],
-    "creacionFechaHora": "2022-04-08T08:00:00",
-    "modificacionFechaHora": "2022-04-08T11:00:00"
+    "creadoFechaHora": "2022-04-08T08:00:00",
+    "modificadoFechaHora": "2022-04-08T11:00:00"
 }
 ```
