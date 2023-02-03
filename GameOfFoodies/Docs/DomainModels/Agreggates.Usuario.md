@@ -7,5 +7,8 @@
     "nombre": "Usuario",
     "apellido": "Test",
     "email": "usuario.test@gmail.com",
-    "token": "ciOiJIU...IxMjM0N"
+    "password": "TestPass1232!", // TODO: Hash this
+    "creadoFechaHora": "2020-01-01T00:00:00.0000000Z",
+    "modificadoFechaHora": "2020-01-01T00:00:00.0000000Z"
+
 }
