@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Services;
-using GameOfFoodies.Domain.Entities;
+using GameOfFoodies.Domain.UsuarioAggregate;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 

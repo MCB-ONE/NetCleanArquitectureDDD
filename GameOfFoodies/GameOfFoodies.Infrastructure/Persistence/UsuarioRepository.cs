@@ -1,5 +1,5 @@
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
-using GameOfFoodies.Domain.Entities;
+using GameOfFoodies.Domain.UsuarioAggregate;
 
 namespace GameOfFoodies.Infrastructure.Persistence;
 

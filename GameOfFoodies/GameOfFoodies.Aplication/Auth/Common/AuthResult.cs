@@ -1,4 +1,4 @@
-using GameOfFoodies.Domain.Entities;
+using GameOfFoodies.Domain.UsuarioAggregate;
 
 namespace GameOfFoodies.Aplication.Auth.Common;
 

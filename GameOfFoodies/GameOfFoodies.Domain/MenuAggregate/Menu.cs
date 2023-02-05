@@ -1,11 +1,11 @@
-using GameOfFoodies.Domain.Cena.ValueObjects;
+using GameOfFoodies.Domain.CenaAggregate.ValueObjects;
 using GameOfFoodies.Domain.Common.Models;
-using GameOfFoodies.Domain.Huesped.ValueObjects;
-using GameOfFoodies.Domain.Menu.Entities;
-using GameOfFoodies.Domain.Menu.ValueObjects;
-using GameOfFoodies.Domain.Resena.ValueObjects;
+using GameOfFoodies.Domain.HuespedAggregate.ValueObjects;
+using GameOfFoodies.Domain.MenuAggregate.Entities;
+using GameOfFoodies.Domain.MenuAggregate.ValueObjects;
+using GameOfFoodies.Domain.ResenaAggregate.ValueObjects;
 
-namespace GameOfFoodies.Domain.Menu;
+namespace GameOfFoodies.Domain.MenuAggregate;
 
 public sealed class Menu : AggregateRoot<MenuId>
 {

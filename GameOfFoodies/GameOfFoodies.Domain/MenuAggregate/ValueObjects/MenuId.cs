@@ -1,6 +1,6 @@
 using GameOfFoodies.Domain.Common.Models;
 
-namespace GameOfFoodies.Domain.Menu.ValueObjects;
+namespace GameOfFoodies.Domain.MenuAggregate.ValueObjects;
 
 public sealed class MenuId : ValueObject
 {

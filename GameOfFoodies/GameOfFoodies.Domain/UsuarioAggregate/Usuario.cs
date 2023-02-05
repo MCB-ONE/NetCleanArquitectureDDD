@@ -1,4 +1,4 @@
- namespace GameOfFoodies.Domain.Entities;
+ namespace GameOfFoodies.Domain.UsuarioAggregate;
 
  public class Usuario {
     public Guid Id {get; set;} = Guid.NewGuid();

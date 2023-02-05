@@ -1,6 +1,6 @@
-using GameOfFoodies.Domain.Cena.ValueObjects;
+using GameOfFoodies.Domain.CenaAggregate.ValueObjects;
 using GameOfFoodies.Domain.Common.Models;
-namespace GameOfFoodies.Domain.Cena;
+namespace GameOfFoodies.Domain.CenaAggregate;
 
 public sealed class Cena : AggregateRoot<CenaId>
 {

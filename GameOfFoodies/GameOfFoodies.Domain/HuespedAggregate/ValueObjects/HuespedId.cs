@@ -1,17 +1,17 @@
 using GameOfFoodies.Domain.Common.Models;
 
-namespace GameOfFoodies.Domain.Cena.ValueObjects;
+namespace GameOfFoodies.Domain.HuespedAggregate.ValueObjects;
 
-public sealed class CenaId : ValueObject
+public sealed class HuespedId : ValueObject
 {
     public Guid Value {get; }
 
-    private CenaId(Guid value)
+    private HuespedId(Guid value)
     {
         Value = value;
     }
 
-    public static CenaId CreateUnique()
+    public static HuespedId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

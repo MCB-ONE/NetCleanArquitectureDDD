@@ -1,7 +1,7 @@
 using GameOfFoodies.Domain.Common.Models;
-using GameOfFoodies.Domain.Menu.ValueObjects;
+using GameOfFoodies.Domain.MenuAggregate.ValueObjects;
 
-namespace GameOfFoodies.Domain.Menu.Entities;
+namespace GameOfFoodies.Domain.MenuAggregate.Entities;
 
 public sealed class SeccionMenu : Entity<SeccionMenuId>
 {

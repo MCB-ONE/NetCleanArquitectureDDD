@@ -1,7 +1,7 @@
 using GameOfFoodies.Domain.Common.Models;
-using GameOfFoodies.Domain.Huesped.ValueObjects;
+using GameOfFoodies.Domain.HuespedAggregate.ValueObjects;
 
-namespace GameOfFoodies.Domain.Huesped;
+namespace GameOfFoodies.Domain.HuespedAggregate;
 
 public sealed class Huesped : AggregateRoot<HuespedId>
 {

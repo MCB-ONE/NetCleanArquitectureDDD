@@ -3,7 +3,7 @@ using GameOfFoodies.Aplication.Auth.Common;
 using GameOfFoodies.Aplication.Common.Interfaces.Auth;
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
 using GameOfFoodies.Domain.Common.Errors;
-using GameOfFoodies.Domain.Entities;
+using GameOfFoodies.Domain.UsuarioAggregate;
 using MediatR;
 
 namespace GameOfFoodies.Aplication.Auth.Commands.Registro;

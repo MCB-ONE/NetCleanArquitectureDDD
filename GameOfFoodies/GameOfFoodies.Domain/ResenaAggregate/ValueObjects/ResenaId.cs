@@ -1,17 +1,17 @@
 using GameOfFoodies.Domain.Common.Models;
 
-namespace GameOfFoodies.Domain.Menu.ValueObjects;
+namespace GameOfFoodies.Domain.ResenaAggregate.ValueObjects;
 
-public sealed class SeccionMenuId : ValueObject
+public sealed class ResenaId : ValueObject
 {
     public Guid Value {get; }
 
-    private SeccionMenuId(Guid value)
+    private ResenaId(Guid value)
     {
         Value = value;
     }
 
-    public static SeccionMenuId CreateUnique()
+    public static ResenaId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

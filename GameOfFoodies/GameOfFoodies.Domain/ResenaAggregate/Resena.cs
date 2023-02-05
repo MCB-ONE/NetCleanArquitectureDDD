@@ -1,7 +1,7 @@
 using GameOfFoodies.Domain.Common.Models;
-using GameOfFoodies.Domain.Resena.ValueObjects;
+using GameOfFoodies.Domain.ResenaAggregate.ValueObjects;
 
-namespace GameOfFoodies.Domain.Resena;
+namespace GameOfFoodies.Domain.ResenaAggregate;
 
 public sealed class Resena : AggregateRoot<ResenaId>
 {
