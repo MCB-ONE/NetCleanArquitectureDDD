@@ -35,7 +35,12 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>> where TId : notnull
         // Anulamos el método getHashCode de la clase object dado que queremos dos objetos de valor con los mismos valores en sus propiedades pero también que devuelvan el mismo HashCode
     public override int GetHashCode()
     {
-        //
         return Id.GetHashCode();
     }
+
+    #pragma warning disable CS8618
+    protected Entity()
+    {
+    }
+    #pragma warning disable CS8618
 }

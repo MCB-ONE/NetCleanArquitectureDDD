@@ -4,7 +4,7 @@ namespace GameOfFoodies.Domain.HuespedAggregate.ValueObjects;
 
 public sealed class HuespedId : ValueObject
 {
-    public Guid Value {get; }
+    public Guid Value {get; private set; }
 
     private HuespedId(Guid value)
     {
@@ -16,9 +16,14 @@ public sealed class HuespedId : ValueObject
         return new(Guid.NewGuid());
     }
 
-
+    public static HuespedId Create(Guid value)
+    {
+        return new(value);
+    }
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
     }
+
+    private HuespedId() { }
 }

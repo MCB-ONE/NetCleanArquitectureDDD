@@ -1,0 +1,24 @@
+@host =http://localhost:5242
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0YmQ5MGQzNS04ZGY1LTQxZWUtYTc0NC1iMjI0M2VlZmYwOWMiLCJnaXZlbl9uYW1lIjoiVXN1YXJpbyIsImZhbWlseV9uYW1lIjoiVGVzdCIsImp0aSI6Ijk0NzJjNTE3LWU2MjktNDZmNS05NjY2LTczOWQ3YjNmYmFhMSIsImV4cCI6MTY3NTcxNTM5MCwiaXNzIjoiR2FtZU9mRm9vZGllcyIsImF1ZCI6IkdhbWVPZkZvb2RpZXMifQ.ai_7u_4GbXWWpeHYgj7E8Eh6fmtPq1FH1Bu8PZ8Vd3E
+@huespedId =00000000-0000-0000-0000-000000000000
+
+POST {{host}}/huespedes/{{huespedId}}/menus
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "nombre": "Menú vegano",
+    "descripcion": "Todo vegano! Únete a nostros para disfrutar de una cena saludable..",
+    "secciones": [
+        {
+            "nombre": "Aperitivo",
+            "descripcion": "Entrantes",
+            "platos": [
+                {
+                    "nombre": "Tempura de hortalizas",
+                    "descripcion": "Fritura de hortalizas variadas al estilo japonés"
+                }
+            ]
+        }
+    ]
+}

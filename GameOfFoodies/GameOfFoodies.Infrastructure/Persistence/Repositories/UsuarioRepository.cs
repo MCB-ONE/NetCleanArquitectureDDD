@@ -1,7 +1,7 @@
 using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
 using GameOfFoodies.Domain.UsuarioAggregate;
 
-namespace GameOfFoodies.Infrastructure.Persistence;
+namespace GameOfFoodies.Infrastructure.Persistence.Repositories;
 
 public class UsuarioRepository : IUsuarioRepository
 {

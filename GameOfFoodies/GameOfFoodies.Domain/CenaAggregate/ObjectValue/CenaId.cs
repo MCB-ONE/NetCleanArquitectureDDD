@@ -16,6 +16,10 @@ public sealed class CenaId : ValueObject
         return new(Guid.NewGuid());
     }
 
+    public static CenaId Create(Guid value)
+    {
+        return new(value);
+    }
 
     public override IEnumerable<object> GetEqualityComponents()
     {

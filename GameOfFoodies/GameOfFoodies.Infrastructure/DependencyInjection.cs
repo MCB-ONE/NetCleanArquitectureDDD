@@ -4,8 +4,10 @@ using GameOfFoodies.Aplication.Common.Interfaces.Persistence;
 using GameOfFoodies.Aplication.Common.Interfaces.Services;
 using GameOfFoodies.Infrastructure.Auth;
 using GameOfFoodies.Infrastructure.Persistence;
+using GameOfFoodies.Infrastructure.Persistence.Repositories;
 using GameOfFoodies.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -18,11 +20,20 @@ public static class DependencyInjection
 
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
     {
-        services.AddAuth(config);
+        services
+        .AddAuth(config)
+        .AddPersistence();
         
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
+        return services;
+    }
+
+    public static IServiceCollection AddPersistence(this IServiceCollection services)
+    {
+        services.AddDbContext<GameOfFoodiesDbContext>(options => options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=GameOfFoodies;Trusted_Connection=True; Encrypt=False "));
         services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+        services.AddScoped<IMenuRepository, MenuRepository>();
 
         return services;
     }
